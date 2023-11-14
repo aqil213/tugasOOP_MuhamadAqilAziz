@@ -9,8 +9,15 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 - Variable bertipe data boolean yang menyimpan nilai status Anda (single atau tidak)
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
-fun myProfile() {
 
+    fun myProfile() {
+    val firstName: String = "Aqil"
+    val lastName: String = "Aziz"
+    val age: Int = 23
+    val single: Boolean = true
+    println("Name: $firstName $lastName")
+    println("Age: $age")
+    println("Single: $single")
 }
 
 
@@ -19,6 +26,9 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
+    println("Kami dari group $groupId")
+    println("kelas $session")
+    println("Group Members: $groupMember")
     return ""
 }
 
@@ -29,8 +39,9 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
+    val  fiftyOne = listOf("Aqil", "Widya", "Adel", "Afidz", "Aryanto")
 
-    return listOf()
+    return listOf(fiftyOne)
 }
 
 /**
@@ -41,19 +52,16 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
-
-    return 0
+    val mentor = arrayOf<String>("Budi", "Annisah")
+    val countOfGroup = arrayOf<String>("Aqil", "Widya", "Adel", "Afidz", "Aryanto")
+    return mentor.size + countOfGroup.size
 }
-
 fun main() {
 
+
     myProfile()
-
     val myTeam = myTeam()
-    println("My team is: $myTeam")
-
+    println("My team are: $myTeam")
     val totalMember = totalMember()
     println("Total Member group : $totalMember")
 
@@ -62,6 +70,5 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
-
+    groupDetail("Fifty-One", listOf("Aqil ", "Widya", "Adel", "Afidz", "Aryanto"), "Morning")
 }

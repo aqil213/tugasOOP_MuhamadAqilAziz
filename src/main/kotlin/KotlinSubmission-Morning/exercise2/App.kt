@@ -1,4 +1,4 @@
-package id.infinitelearning.KotlinSubmission.exercise2
+  package id.infinitelearning.KotlinSubmission.exercise2
 
 fun main() {
 
@@ -9,7 +9,30 @@ fun main() {
     - Agar lebih mudah, gunakanlah for loop dan logika if untuk mengisi bilangan genap pada list
      */
     // Buat di bawah sini
+    println("==== Bilangan Genap 1 sampai 100====")
+    for (n: Int in 1..100)
+        if (n % 2 ==0)
+        println(" $n")
 
+
+
+    val map = mapOf(
+            "Jan" to "Januari",
+            "Feb" to "Februari",
+            "Mar" to "Maret",
+            "Apr" to "April",
+            "Mei" to "Mei",
+            "Jun" to "Juni",
+            "Jul" to "Juli",
+            "Ags" to "Agustus",
+            "Sep" to "September",
+            "Okt" to "Oktober",
+            "Nov" to "November",
+            "Des" to "Desember"
+    )
+    map.forEach { (key, value) ->
+        println("$key -> $value")
+    }
 
     /** Latihan 2 Map
     Buatlah variabel bertipe Map dengan kriteria:
@@ -30,6 +53,8 @@ fun main() {
     - "It's {$monthNow} now, I was born in {$birthMonth}"
      */
     // Buat di bawah sini
-
+        val monthNow = "November"
+        val birthMonth = "May"
+        println("It's $monthNow now,I was born in $birthMonth")
 
 }
